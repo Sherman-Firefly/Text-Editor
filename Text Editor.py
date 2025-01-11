@@ -22,7 +22,7 @@ def savefile():
     filepath=asksaveasfilename(defaultextension="txt",filetypes=[('Textfiles','.txt'),('All files','*.*')])
     if not filepath:
         return
-    with open(filepath,"r") as output_file:
+    with open(filepath,"w") as output_file:
         text=txt_edit.get(1.0,END)
         output_file.write(text)
     window.title(f"Save Window{filepath}")
